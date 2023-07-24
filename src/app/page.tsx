@@ -1,7 +1,11 @@
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      Penis
-    </div>
+    <main>
+      <div className="text-center">
+        <h1> Hello World! </h1>
+      </div>
+    </main>
   )
 }
+
+export default Home;

@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(49, 48, 48, 0.151);
+    .header{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        nav .menu{
+            display: flex;
+            gap: 2em;
+        }
+        .btns button{
+            padding: .7em;
+            background-color: #8e44ad;
+            color: #EDEDED;
+            border: 3px solid #8325ac;
+            border-radius: .7em;
+            cursor: pointer;
+        }
+    }
+}
