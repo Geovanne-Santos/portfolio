@@ -8,17 +8,23 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .logo{
+            font-size: 1.5em;
+        }
         nav .menu{
             display: flex;
             gap: 2em;
         }
         .btns button{
-            padding: .7em;
+            padding: .6em 1em;
             background-color: #8e44ad;
+            border-radius: 10px;
             color: #EDEDED;
-            border: 3px solid #8325ac;
-            border-radius: .7em;
             cursor: pointer;
+            transition: .6s ease;
+            &:hover{
+                background-color: #632d7a;
+            }
         }
     }
 }

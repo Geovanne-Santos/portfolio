@@ -12,14 +12,14 @@ const Header = () => {
 
             <nav>
                 <ul className='menu'>
-                    <li><a href="/sobre">Início</a></li>
-                    <li><a href="/">Sobre</a></li>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
                     <li><a href="/">Projetos</a></li>
                 </ul>
             </nav>
 
             <div className="btns">
-                <button className='rounded-md'>
+                <button>
                     Contate-se
                 </button>
             </div>
