@@ -1,4 +1,20 @@
+@import "../../app/style/globals.scss";
+
+@keyframes gradientShine {
+    0% {
+      background-position: 100% 0%;
+    }
+    100%{
+      background-position: 0% 100%;
+    }
+}
+
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
     width: 100%;
     padding: 1em;
     box-shadow: 0 0 10px rgba(49, 48, 48, 0.151);
@@ -8,22 +24,44 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .logo{
-            font-size: 1.5em;
+        .logo > span{
+            font-size: 28px;
+            background: linear-gradient(135deg,#8e44ad,#a9adec,#88edfa,#8e44ad);
+            background-size: 400% 400%;
+            background-position: 400%;
+            letter-spacing: 2px;
+            font-weight: 700;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradientShine 3s linear infinite alternate-reverse; 
+            animation-play-state: paused;
+            &:hover{
+                animation-play-state: running;
+            }
         }
         nav .menu{
             display: flex;
             gap: 2em;
         }
-        .btns button{
-            padding: .6em 1em;
-            background-color: #8e44ad;
-            border-radius: 10px;
-            color: #EDEDED;
-            cursor: pointer;
-            transition: .6s ease;
-            &:hover{
-                background-color: #632d7a;
+        .btns {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            button{
+                padding: .6em 1em;
+                background-color: #8e44ad;
+                border-radius: 10px;
+                color: #EDEDED;
+                cursor: pointer;
+                transition: .6s ease;
+                &:hover{
+                    background-color: #632d7a;
+                }
+            }
+            svg{
+                font-size: 2em;
+                cursor:pointer
             }
         }
     }

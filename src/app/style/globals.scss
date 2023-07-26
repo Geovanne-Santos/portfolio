@@ -2,17 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+$darkTheme_bg: #0C0A12;
+$darkTheme_color: #EDEDED;
+$whiteTheme_bg: #EDEDED;
+$whiteTheme_color: #0C0A12;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  color: rgb(8, 8, 8);
 }
 
-html, body{
-  background-color: #0C0A12;
-  background-color: #EDEDED;
+body{
+  background-color: $whiteTheme_bg;
+  color: $whiteTheme_color;
+  transition: .3s ease-in-out;
+}
+[data-theme="dark"] body{
+  background-color: $darkTheme_bg;
+  color: #EDEDED;
 }
 
+main{
+  width: 90%;
+  height: 100%;
+  margin: 15vh auto;
+}

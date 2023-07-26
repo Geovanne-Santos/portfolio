@@ -1,10 +1,10 @@
 const Home = () => {
   return (
-    <main>
-      <div className="text-center">
+    <section>
+      <div>
         <h1> Hello World! </h1>
       </div>
-    </main>
+    </section>
   )
 }
 

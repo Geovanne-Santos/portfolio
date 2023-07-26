@@ -1,6 +1,21 @@
-import './style.scss'
+"use client";
+import Link from 'next/link';
+import './style.scss';
+import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
-const Header = () => {
+const Header = (/* {darkMode, toggleDarkMode} */) => {
+
+    const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+
   return (
     <header>
         <div className="header">    
@@ -12,9 +27,9 @@ const Header = () => {
 
             <nav>
                 <ul className='menu'>
-                    <li><a href="/">Início</a></li>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/">Projetos</a></li>
+                    <li><Link href={"/"}>Início</Link></li>
+                    <li><Link href={"/sobre"}>Sobre</Link></li>
+                    <li><Link href={"/"}>Projetos</Link></li>
                 </ul>
             </nav>
 
@@ -22,6 +37,13 @@ const Header = () => {
                 <button>
                     Contate-se
                 </button>
+                
+                {theme === 'dark' ? (
+                    <BsSunFill onClick={() => setTheme("light")} />        
+                ) : (
+                    <BsMoonStarsFill onClick={() => setTheme("dark")}/>
+                )
+            }
             </div>
         </div>
     </header>

@@ -1,8 +1,7 @@
-import Header from '@/components/Header'
+"use client";
 import './style/globals.scss'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import DarkModeProvider from '@/contexts/DarkModeContext';
+import Header from '@/components/Header';
 
 export const metadata = {
   title: 'Geovanne Meloni - Início',
@@ -14,12 +13,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
-        <Header />
-        {children}
+      <DarkModeProvider>
+      <body>
+          <Header />
+          <main className='text-center'>
+            {children}
+          </main>
       </body>
+      </DarkModeProvider>
     </html>
   )
 }
