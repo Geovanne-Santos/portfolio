@@ -5,7 +5,7 @@ import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-const Header = (/* {darkMode, toggleDarkMode} */) => {
+const Header = () => {
 
     const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
