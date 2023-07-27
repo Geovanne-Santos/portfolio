@@ -20,7 +20,7 @@ const Header = () => {
     <header>
         <div className="header">    
             <div className='logo'>
-                <span>
+                <span className='title'>
                     Geovanne Meloni
                 </span>
             </div>
@@ -34,9 +34,9 @@ const Header = () => {
             </nav>
 
             <div className="btns">
-                <button>
-                    Contate-se
-                </button>
+                <Link href={'/'}>
+                    ARTIGOS
+                </Link>
                 
                 {theme === 'dark' ? (
                     <BsSunFill onClick={() => setTheme("light")} />        
