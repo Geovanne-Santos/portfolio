@@ -1,8 +1,20 @@
+"use client";
+import TypeIt from "typeit-react";
+
 const Home = () => {
   return (
-    <section>
+    <section className="homePage">
       <div>
-        <h1> Hello World! </h1>
+        <h1> 
+          Olá, eu sou Geovanne Meloni e eu sou <br />
+          <TypeIt
+            options={{
+              strings: ['Desenvolvedor Web'],
+              speed: 50,
+            }}
+          />
+          
+        </h1>
       </div>
     </section>
   )
