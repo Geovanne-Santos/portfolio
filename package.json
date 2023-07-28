@@ -15,8 +15,12 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
+    "i18next": "^23.3.0",
+    "i18next-http-backend": "^2.2.1",
     "next": "13.4.9",
+    "next-i18next": "^14.0.0",
     "next-themes": "^0.2.1",
+    "next-translate": "^2.5.2",
     "postcss": "8.4.25",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -25,5 +29,8 @@
     "tailwindcss": "3.3.2",
     "typeit-react": "^2.6.4",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "next-translate-plugin": "^2.5.2"
   }
 }
