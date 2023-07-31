@@ -3,18 +3,22 @@ import Link from 'next/link';
 import './style.scss';
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 
 const Header = () => {
 
-    const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   
   useEffect(() => {
     setMounted(true)
   }, [])
 
+
+  if(!mounted) {
+    return null
+  }
 
   return (
     <header>
@@ -29,19 +33,19 @@ const Header = () => {
                 <ul className='menu'>
                     <li><Link href={"/"}>Início</Link></li>
                     <li><Link href={"/sobre"}>Sobre</Link></li>
-                    <li><Link href={"/"}>Projetos</Link></li>
+                    <li><Link href={"https://www.facebook.com/"}>Projetos</Link></li>
                 </ul>
             </nav>
 
             <div className="btns">
                 <Link href={'/'}>
-                    ARTIGOS
+                    Artigos
                 </Link>
                 
                 {theme === 'dark' ? (
-                    <BsSunFill onClick={() => setTheme("light")} />        
+                    <BsSunFill focusable={'true'} onClick={() => setTheme("light")} />        
                 ) : (
-                    <BsMoonStarsFill onClick={() => setTheme("dark")}/>
+                    <BsMoonStarsFill focusable={'true'} onClick={() => setTheme("dark")}/>
                 )
             }
             </div>

@@ -1,20 +1,28 @@
 "use client";
 import TypeIt from "typeit-react";
+import '@/app/style/home.modules.scss'
+import Image from "next/image";
+import PresentationImg from "@/assets/presentation_img.png"
 
 const Home = () => {
   return (
     <section className="homePage">
-      <div>
-        <h1 className="greeting"> 
-          Olá, eu sou Geovanne Meloni e eu sou <br />
-          <TypeIt
-            options={{
-              strings: ['Desenvolvedor Web'],
-              speed: 100,
-            }}
+      <div className="presentation">
+        <div className="greeting">
+          <h1> 
+            Olá, eu sou Geovanne Meloni <br />e eu sou <br />
+            <span className="animatedType">
+              <TypeIt>Desenvolvedor Web.</TypeIt>
+            </span>
+          </h1>
+        </div>
+
+        <div className="presentationImg">
+          <Image 
+            src={PresentationImg} 
+            alt="Apresentação de portfólio do Dev Geovanne"
           />
-          
-        </h1>
+        </div>
       </div>
     </section>
   )

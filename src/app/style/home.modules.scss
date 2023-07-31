@@ -1,11 +1,49 @@
 @import "./globals.scss";
 
-
-.homePage .greeting{
-    font-size: 2.5em;
-
-    .animatedType{
-        color: greenyellow;
+@keyframes floating {
+    0%{
+        transform: translateY(-10%);
+        transition: ease 1s;
     }
-  }
-  
+    50%{
+        transform: translateY(10%);
+        transition: ease 1s;
+    }
+}
+
+.homePage {
+    .presentation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        .greeting{
+            width: 60%;
+            text-align: left;
+            h1{
+                font-size: 28px;
+            }
+        }
+        .presentationImg{
+            width: 40%;
+            img{
+                box-shadow: 0 1em 2em rgba(0, 0, 0, .6);
+                transform: translateY(-10%);
+                animation: floating 5s infinite;
+                transition: ease 1s;
+                width: 100%;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+
+.light .animatedType{
+    color: #8847FF;
+}
+
+.dark .animatedType{
+    color: #99FF3A;
+}

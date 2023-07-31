@@ -14,21 +14,25 @@ $whiteTheme_color: #0C0A12;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  outline: none;
 }
 
 body{
   background-color: $whiteTheme_bg;
   color: $whiteTheme_color;
   transition: .3s ease-in-out;
+  img{
+    -webkit-user-drag: none;
+  }
 }
-[data-theme="dark"] body{
+.dark body{
   background-color: $darkTheme_bg;
   color: #EDEDED;
 }
 
 main{
   width: 90%;
-  height: 60vh;
+  height: 50vh;
   margin: 15vh auto;
   display: grid;
   place-items: center;

@@ -18,7 +18,7 @@ const DarkModeProvider = ({ children }: {children: ReactNode}) => {
     }
 
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute='class' enableSystem={true}>
         {children}
     </ThemeProvider>
   )
