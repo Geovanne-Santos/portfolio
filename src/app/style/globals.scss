@@ -28,8 +28,12 @@ body{
 
 main{
   width: 90%;
-  height: 55vh;
-  margin: auto;
+  height: 60vh;
+  margin: 15vh auto;
   display: grid;
   place-items: center;
+}
+
+.homePage .greeting{
+  font-size: 2.5em;
 }
