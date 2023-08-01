@@ -1,6 +1,7 @@
 import './style/globals.scss'
 import DarkModeProvider from '@/contexts/DarkModeContext';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Geovanne Meloni - Início',
@@ -21,6 +22,7 @@ export default function RootLayout({children}: RootLayoutProps) {
             <main className='text-center'>
               {children}
             </main>
+            <Footer />
           </DarkModeProvider>
         </body>
     </html>

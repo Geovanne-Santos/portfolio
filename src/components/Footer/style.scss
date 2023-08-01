@@ -1,0 +1,35 @@
+@import "../../app/style/globals.scss";
+
+footer{
+    width: 100%;
+    padding: 1em;
+    .footer{
+        width: 95%;
+        margin: 0 auto;
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            li{
+                font-size: 2em;
+                transition: .3s ease-in-out;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+        p{
+            text-align: center;
+            padding-top: 1.5em;
+        }
+    }
+}
+
+.light .footer ul li:hover{
+    color: $whiteTheme_color;
+    opacity: .4;
+}
+.dark .footer ul li:hover{
+    color: $darkTheme_color;
+    filter: brightness(.4);
+}

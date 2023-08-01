@@ -62,6 +62,7 @@ header {
             gap: 2em;
             li {
                 font-size: 1em;
+                font-weight: 600;
                 position: relative;
                 a::after {
                     content: '';
@@ -72,7 +73,7 @@ header {
                     height: 0.1em;
                     transform-origin: center    ;
                     transform: scaleX(0);
-                    transition: transform .5s ease;
+                    transition: transform .3s ease-in-out;
                 }
                 a:hover::after, a:focus::after {
                     transform: scaleX(100%); 
@@ -90,13 +91,13 @@ header {
                 border-radius: 10px;
                 font-size: 16px;
                 cursor: pointer;
-                transition: .6s ease;
+                transition: .3s ease-in-out;
                 font-weight: 600;
             }
             svg{
                 font-size: 1.5em;
                 cursor:pointer;
-                transition: transform .5s ease;
+                transition: transform .3s ease-in-out;
                 &:active, &:focus{
                     transform: scale(0.8);
                 }

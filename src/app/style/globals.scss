@@ -32,8 +32,8 @@ body{
 
 main{
   width: 90%;
-  height: 50vh;
-  margin: 15vh auto;
+  min-height: 50vh;
+  margin: 10vh auto;
   display: grid;
   place-items: center;
 }
