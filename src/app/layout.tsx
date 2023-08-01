@@ -15,7 +15,7 @@ export interface RootLayoutProps {
 export default function RootLayout({children}: RootLayoutProps) {
 
   return (
-    <html>
+    <html lang='pt-br'>
         <body>
           <DarkModeProvider>
             <Header />

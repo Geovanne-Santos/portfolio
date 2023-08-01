@@ -2,18 +2,19 @@
 
 
 
-$whiteTheme_title: linear-gradient(135deg, #ea698b, #ac46a1, #6d23b6, #47126b);
-$darkTheme_title: linear-gradient(135deg, #1209B8, #9EB800, #36a36d, #862fd8);
+$whiteTheme_title: linear-gradient(to right, #ea698b, #ac46a1, #6d23b6, #47126b);
+$darkTheme_title: linear-gradient(to right, #008000, #32cd32, #3cb371, #2e8b57);
 
 
 @keyframes gradientShine {
     0% {
-      background-position: 100% 0%;
+        background-position: 0% 0%;
     }
-    100%{
-      background-position: 0% 100%;
+    100% {
+        background-position: 200% 100%;
     }
 }
+
 
 @keyframes slideIn {
     0% {
@@ -50,7 +51,7 @@ header {
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
                 background-clip: text;
-                animation: gradientShine 1.5s linear infinite alternate-reverse; 
+                animation: gradientShine 3s linear infinite alternate-reverse; 
                 animation-play-state: paused;
                 &:hover{
                     animation-play-state: running;

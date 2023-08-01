@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import React from 'react';
 import { BsEnvelopeFill, BsGithub, BsLinkedin, BsTelephoneFill } from 'react-icons/bs';
 import './style.scss';
 
-const Footer = () => {
-  return (
+const Footer = () => (
     <footer>
         <div className="footer">
             <ul>
@@ -32,7 +30,6 @@ const Footer = () => {
             <p>Desenvolvido com 💜 por Geovanne Meloni dos Santos</p>
         </div>
     </footer>
-  )
-}
+  );
 
 export default Footer;
