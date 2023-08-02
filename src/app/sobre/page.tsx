@@ -21,6 +21,9 @@ const About = () => (
           <p>
             Meu nome é <strong>Geovanne Meloni</strong>, sou <strong>Desenvolvedor Web</strong> e estudante de <strong>Desenvolvimento de Software Multiplataforma</strong>.
           </p>
+          <p>
+            a
+          </p>
         </div>
       </div>
     </section>

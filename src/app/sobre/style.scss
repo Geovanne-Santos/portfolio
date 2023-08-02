@@ -16,6 +16,9 @@
 
         .aboutMe{
             width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
             p{
                 strong{
                     font-size: 1.5rem;
