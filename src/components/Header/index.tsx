@@ -4,17 +4,18 @@ import './style.scss';
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { useTheme } from 'next-themes';
 import React,{ useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
 
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const path = usePathname();
+  console.log(path)
 
-  
   useEffect(() => {
     setMounted(true)
   }, [])
-
 
   if(!mounted) {
     return null
@@ -28,12 +29,11 @@ const Header = () => {
                     Geovanne M.
                 </span>
             </div>
-
             <nav>
                 <ul className='menu'>
-                    <li><Link href={"/"}>Início</Link></li>
-                    <li><Link href={"/sobre"}>Sobre</Link></li>
-                    <li><Link href={"/projetos"}>Projetos</Link></li>
+                    <li className={path === '/' ? 'active' : ''}><Link href={"/"}>Início</Link></li>
+                    <li className={path === '/sobre' ? 'active' : ''}><Link href={"/sobre"}>Sobre</Link></li>
+                    <li className={path === '/projetos' ? 'active' : ''}><Link href={"/projetos"}>Projetos</Link></li>
                 </ul>
             </nav>
 

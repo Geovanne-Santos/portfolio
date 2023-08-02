@@ -16,16 +16,15 @@ export default function RootLayout({children}: RootLayoutProps) {
 
   return (
     <html lang='pt-br'>
-        <body className="h-screen flex flex-col justify-center">
-          <DarkModeProvider>
-            <Header />
-            <main className="flex-1 w-full p-5 mx-auto grid place-items-center gap-10">
-              {children}
-            </main>
-
-            <Footer />
-          </DarkModeProvider>
-        </body>
+      <body className="h-screen flex flex-col justify-center">
+        <DarkModeProvider>
+          <Header />
+          <main className="flex-1 w-full p-5 mx-auto grid place-items-center gap-10">
+            {children}
+          </main>
+          <Footer />
+        </DarkModeProvider>
+      </body>
     </html>
   )
 }

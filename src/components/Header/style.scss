@@ -74,10 +74,11 @@ header {
                     height: 0.1em;
                     transform-origin: center    ;
                     transform: scaleX(0);
-                    transition: transform .3s ease-in-out;
+                    transition: all .3s ease-in-out;
+                    opacity: 1;
                 }
-                a:hover::after, a:focus::after {
-                    transform: scaleX(100%); 
+                &.active a::after, a:hover::after, a:focus::after {
+                    transform: scaleX(.7); 
                 }
             }
         }
