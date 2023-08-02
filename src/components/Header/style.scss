@@ -8,10 +8,10 @@ $darkTheme_title: linear-gradient(to right, #008000, #32cd32, #3cb371, #2e8b57);
 
 @keyframes gradientShine {
     0% {
-        background-position: 0% 0%;
+        background-position: 0% 50%;
     }
     100% {
-        background-position: 200% 100%;
+        background-position: 100% 50%;
     }
 }
 
@@ -21,7 +21,7 @@ $darkTheme_title: linear-gradient(to right, #008000, #32cd32, #3cb371, #2e8b57);
         transform: scaleX(0);
     }
     100% {
-        transform: scaleX(100%);
+        transform: scaleX(1);
     }
 }
 
@@ -41,7 +41,7 @@ header {
         justify-content: space-between;
         align-items: center;
         .logo{
-            width: 25%;
+            width: 15%;
             .title{
                 font-size: 1.5em;
                 background-size: 400% 400%;
@@ -86,13 +86,13 @@ header {
             align-items: center;
             justify-content: flex-end;
             gap: 2em; 
-            width: 25%;
+            width: 15%;
             a{
                 padding: 2.5px 11px;
                 border-radius: 10px;
                 font-size: 16px;
                 cursor: pointer;
-                transition: .3s ease-in-out;
+                transition: all .3s ease-in-out;
                 font-weight: 600;
             }
             svg{

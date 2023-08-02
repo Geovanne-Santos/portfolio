@@ -1,0 +1,15 @@
+.aboutPage{
+    width: 80%;
+    .about{
+        display: flex;
+        align-items: center;
+        .picture{
+            width: 20rem;
+            img{
+                border-radius: 12em;
+                width: 100%;
+                box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}

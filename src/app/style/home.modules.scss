@@ -11,6 +11,7 @@
     }
 }
 .homePage {
+    width: 100%;
     .presentation{
         display: flex;
         justify-content: space-between;
@@ -18,14 +19,36 @@
         width: 80%;
         margin: 0 auto;
         .greeting{
-            width: 60%;
+            width: 40%;
             text-align: left;
-            h1{
-                font-size: 28px;
+            p{
+                margin-bottom: 1.5em;
+                span{
+                    font-size: 1.5rem;
+                }
+            }
+            a{
+                opacity: .8;
+                font-weight: bold;
+                font-size: 1.1rem;
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+                transition: opacity .3s ease-in-out;
+                svg{
+                    transition: transform .3s ease;
+                    font-size: 1.5rem;
+                }
+                &:hover{
+                    opacity: 1;
+                    svg{
+                        transform: translateX(.5rem);
+                    }
+                }
             }
         }
         .presentationImg{
-            width: 40%;
+            width: 25rem;
             img{
                 box-shadow: 0 1em 2em rgba(0, 0, 0, .6);
                 transform: translateY(-10%);
@@ -42,7 +65,4 @@
 }
 .dark .animatedType{
     color: #99FF3A;
-}
-body{
-    overflow: hidden;
 }

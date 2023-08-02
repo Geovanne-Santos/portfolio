@@ -25,7 +25,7 @@ const Header = () => {
         <div className="header">    
             <div className='logo'>
                 <span className='title'>
-                    Geovanne Meloni
+                    Geovanne M.
                 </span>
             </div>
 
@@ -33,7 +33,7 @@ const Header = () => {
                 <ul className='menu'>
                     <li><Link href={"/"}>Início</Link></li>
                     <li><Link href={"/sobre"}>Sobre</Link></li>
-                    <li><Link href={"https://www.facebook.com/"}>Projetos</Link></li>
+                    <li><Link href={"/projetos"}>Projetos</Link></li>
                 </ul>
             </nav>
 

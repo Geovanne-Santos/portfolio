@@ -1,11 +1,25 @@
-const Contact = () => {
+import Image from 'next/image';
+import myPicture from '@/assets/myPicture.jpeg';
+import './style.scss';
+
+const About = () => {
   return (
-    <div>
+    <section className="aboutPage">
       <h1>
-        Página sobre mim
+        Sobre mim
       </h1>
-    </div>
+
+      <div className="about">
+        <div className="picture">
+          <Image 
+            src={myPicture}
+            alt='Foto do Geovanne Meloni para seu portfólio'
+            
+          />
+        </div>
+      </div>
+    </section>
   )
 }
 
-export default Contact;
+export default About;
