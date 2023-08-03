@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import myPicture from '@/assets/myPicture.jpeg';
 import './style.scss';
+import { TbBrandGit, TbBrandNextjs, TbBrandSass, TbBrandTailwind, TbBrandTypescript } from 'react-icons/tb';
 
 const About = () => (
     <section className="aboutPage">
@@ -24,6 +25,20 @@ const About = () => (
           <p>
             a
           </p>
+        </div>
+      </div>
+
+      <div className='skills'>
+        <h2> Minhas ferramentas/Tecnologias </h2>
+        <div className='skillsSet'>
+          <ul>
+            <li><TbBrandNextjs /></li>
+            <li><TbBrandTypescript /></li>
+            <li><TbBrandSass /></li>
+            <li><TbBrandGit /></li>
+            <li>Jquery</li>
+            <li><TbBrandTailwind /></li>
+          </ul>
         </div>
       </div>
     </section>

@@ -26,7 +26,7 @@ $darkTheme_title: linear-gradient(to right, #008000, #32cd32, #3cb371, #2e8b57);
 }
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -34,6 +34,9 @@ header {
     width: 100%;
     padding: 1em;
     user-select: none;
+    &.sticky{
+        box-shadow: 0 0 30px black;
+    }
     .header{
         width: 95%;
         margin: auto;
@@ -65,6 +68,9 @@ header {
                 font-size: 1em;
                 font-weight: 600;
                 position: relative;
+                a{
+                    padding: 12px;
+                }
                 a::after {
                     content: '';
                     position: absolute;
@@ -78,7 +84,7 @@ header {
                     opacity: 1;
                 }
                 &.active a::after, a:hover::after, a:focus::after {
-                    transform: scaleX(.7); 
+                    transform: scaleX(.4); 
                 }
             }
         }
@@ -109,6 +115,7 @@ header {
 }
 
 .light header{
+    background-color: $whiteTheme_bg;
     .title{
         background: $whiteTheme_title;
     }
@@ -129,6 +136,7 @@ header {
 }
 
 .dark header{
+    background-color: $darkTheme_bg;
     .title{
         background: $darkTheme_title;
     }

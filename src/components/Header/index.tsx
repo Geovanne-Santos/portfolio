@@ -11,7 +11,7 @@ const Header = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const path = usePathname();
-  console.log(path)
+
 
   useEffect(() => {
     setMounted(true)
