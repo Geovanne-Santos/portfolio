@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DownloadButton = ({file, children}) => (
+const DownloadButton = ({file, children}: {file: string, children: any}) => (
     <a href={file} className='downloadBtn' download>
         {children}
     </a>
