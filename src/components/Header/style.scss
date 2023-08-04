@@ -39,11 +39,10 @@ header {
     width: 100%;
     padding: 1em;
     user-select: none;
-    box-shadow: 0 0 0px 0px black;
     &.sticky{
         position: fixed;
         top: 0;
-        box-shadow: 0 0 15px 2px black;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
     .header{
         width: 95%;
@@ -140,6 +139,9 @@ header {
     }
 }
 .dark header{
+    &.sticky{
+        background-color: #0d0a13;
+    }
     transition: background-color .3s ease-in-out, box-shadow .3s ease;
     .title{
         background: var(--title-color);

@@ -6,9 +6,7 @@ import DownloadButton from '@/components/DownloadButton';
 
 const About = () => (
     <section className="aboutPage">
-      <h1>
-        Sobre mim
-      </h1>
+      <h1>Sobre mim</h1>
 
       <div className="about">
         <div className="picture">
