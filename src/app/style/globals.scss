@@ -1,14 +1,25 @@
+/* Temas */
+.light {
+  --bg-color: #f1f7f6;
+  --text-color: #0C0A12;
+  --primary-color: #47126b;
+  --skills-bg: #c3c1c5;
+}
+
+.dark {
+  --bg-color: #0C0A12;
+  --text-color: #f1f7f6;
+  --primary-color: #9EB800;
+  --skills-bg: #29282b;
+}
+
+/* Estilos base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
-
-$darkTheme_bg: #0C0A12;
-$darkTheme_color: #f1f7f6;
-$whiteTheme_bg: #f1f7f6;
-$whiteTheme_color: #0C0A12;
-
 * {
   padding: 0;
   margin: 0;
@@ -35,23 +46,14 @@ p{
 }
 
 body{
-  background-color: $whiteTheme_bg;
-  color: $whiteTheme_color;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   transition: .3s ease-in-out;
   img{
     -webkit-user-drag: none;
   }
 }
 .dark body{
-  background-color: $darkTheme_bg;
-  color: #EDEDED;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
-
-/* main{
-  width: 90%;
-  min-height: calc(90vh - (2 * 9rem));
-  margin: 10vh auto;
-  display: grid;
-  place-items: center;
-}
- */

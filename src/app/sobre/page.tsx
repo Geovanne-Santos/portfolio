@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import myPicture from '@/assets/myPicture.jpeg';
 import './style.scss';
-import { TbBrandGit, TbBrandNextjs, TbBrandSass, TbBrandTailwind, TbBrandTypescript } from 'react-icons/tb';
+import { SiNextdotjs, SiTypescript, SiSass, SiGit, SiTailwindcss, SiJquery } from 'react-icons/si';
+import DownloadButton from '@/components/DownloadButton';
 
 const About = () => (
     <section className="aboutPage">
@@ -20,24 +21,25 @@ const About = () => (
 
         <div className='aboutMe'>
           <p>
-            Meu nome é <strong>Geovanne Meloni</strong>, sou <strong>Desenvolvedor Web</strong> e estudante de <strong>Desenvolvimento de Software Multiplataforma</strong>.
+            Meu nome é Geovanne Meloni, sou <strong>Desenvolvedor Web</strong> e estudante de <strong>Desenvolvimento de Software Multiplataforma</strong>.
           </p>
           <p>
-            a
+            Atualmente, atuo como <strong>FullStack</strong>, acumulando um sólido conhecimento técnico em desenvolvimento ágil e implementando melhores práticas para otimização de <strong>SEO</strong>, <strong>desempenho</strong> e <strong>performance</strong>.
           </p>
+          <DownloadButton file={'/geovanne-meloni-cv.pdf'}> Download CV </DownloadButton>
         </div>
       </div>
 
       <div className='skills'>
-        <h2> Minhas ferramentas/Tecnologias </h2>
+        <h2> Minhas Ferramentas/Tecnologias </h2>
         <div className='skillsSet'>
           <ul>
-            <li><TbBrandNextjs /></li>
-            <li><TbBrandTypescript /></li>
-            <li><TbBrandSass /></li>
-            <li><TbBrandGit /></li>
-            <li>Jquery</li>
-            <li><TbBrandTailwind /></li>
+            <li><SiNextdotjs /> Next.js</li>
+            <li><SiTypescript /> TypeScript</li>
+            <li><SiSass />Sass</li>
+            <li><SiGit />Git</li>
+            <li><SiJquery />Jquery</li>
+            <li><SiTailwindcss />TailwindCSS</li>
           </ul>
         </div>
       </div>

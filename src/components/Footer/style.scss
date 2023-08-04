@@ -14,7 +14,8 @@ footer{
             justify-content: center;
             gap: 2em;
             li{
-                transition: opacity .3s ease-in-out;
+                color: var(--text-color);
+                transition: .3s ease;
                 a svg{
                     font-size: 2rem;
                 }
@@ -27,11 +28,4 @@ footer{
             font-size: 1.2rem;
         }
     }
-}
-
-.light .footer ul li:hover{
-    color: $whiteTheme_color;
-}
-.dark .footer ul li:hover{
-    color: $darkTheme_color;
 }

@@ -1,11 +1,12 @@
 .aboutPage{
     width: 80%;
-    margin-top: 5em;
+    margin-top: 30rem;
     .about{
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 2em;
+        margin-bottom: 5em;
         .picture{
             width: 20rem;
             img{
@@ -22,50 +23,62 @@
             gap: 1rem;
             p{
                 strong{
+                    color: var(--primary-color);
+                    transition: color .3s ease;
                     font-size: 1.5rem;
                     font-family: 'Lato', sans-serif;
                     font-weight: 600;
                 }
             }
+            .downloadBtn{
+                color: var(--primary-color);
+                border: 3px solid var(--primary-color);
+                border-radius: 10px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                width: 30%;
+                padding: 2.5px 11px;
+                text-align: center;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    color: #f1f7f6;
+                    background-color: var(--primary-color);
+                }
+            }
         }
     }
 
-    .skills{
+    .skills {
         width: 100%;
-        .skillsSet{
-            width: 60%;
+        .skillsSet {
+            width: 80%;
             margin: 0 auto;
-            ul{
-                /* display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center; */
+            
+            ul {
+                padding: 3em;
                 display: grid;
-                grid-template-columns: auto auto auto;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                 gap: 2em;
-                li{
-                    display: grid;
-                    place-items: center;
-                    height: 5em;
-                    color: #47126b;
-                    background-color: #827d85;
-                    svg{
+    
+                li {
+                    color: var(--primary-color);
+                    background-color: var(--skills-bg);
+                    padding: 1em;
+                    border-radius: .3rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: .5em;
+                    height: auto;
+                    transition: background-color 0.3s ease-in-out, color .3s ease;
+                    font-size: 1.2rem;
+                    svg {
                         font-size: 3em;
                     }
                 }
             }
         }
     }
-}
-
-.light .aboutMe{
-    p strong{
-        color: #47126b;
-    }
-}
-
-.dark .aboutMe{
-    p strong{
-        color: #9EB800;
-    }
+    
 }

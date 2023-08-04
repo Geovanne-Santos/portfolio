@@ -8,21 +8,38 @@ import { usePathname } from 'next/navigation'
 
 const Header = () => {
 
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const path = usePathname();
-
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if(!mounted) {
-    return null
-  }
+    const [mounted, setMounted] = useState(false);
+    const [sticky, setSticky] = useState(false);
+    const { theme, setTheme } = useTheme();
+    const path = usePathname();
+  
+    const isSticky = () => {
+      const header = document.querySelector('header');
+      const scrollTop = window.scrollY;
+      if (scrollTop > (header.offsetTop + 30)) {
+        if (!sticky) {
+          setSticky(true);
+        }
+      } else {
+          setSticky(false);
+      }
+    };
+  
+    useEffect(() => {
+      setMounted(true);
+      window.addEventListener('scroll', isSticky);
+      return () => {
+        window.removeEventListener('scroll', isSticky);
+      };
+    }, []);
+  
+    if (!mounted) {
+      return null;
+    }
+  
 
   return (
-    <header>
+    <header className={sticky ? 'sticky' : ''}>
         <div className="header">    
             <div className='logo'>
                 <span className='title'>

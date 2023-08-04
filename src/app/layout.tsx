@@ -16,6 +16,9 @@ export default function RootLayout({children}: RootLayoutProps) {
 
   return (
     <html lang='pt-br'>
+      <head>
+        <link rel="shortcut icon" href="/favicon2.png" type="image/x-icon" />
+      </head>
       <body className="h-screen flex flex-col justify-center">
         <DarkModeProvider>
           <Header />
