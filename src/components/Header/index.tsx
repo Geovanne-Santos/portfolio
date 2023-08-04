@@ -14,9 +14,9 @@ const Header = () => {
     const path = usePathname();
   
     const isSticky = () => {
-      const header = document.querySelector('header');
+      const header: HTMLElement | null = document.querySelector('header');
       const scrollTop = window.scrollY;
-      if (scrollTop > (header.offsetTop + 30)) {
+      if (header && scrollTop > (header.offsetTop + 30)) {
         if (!sticky) {
           setSticky(true);
         }
