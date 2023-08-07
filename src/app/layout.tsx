@@ -19,7 +19,7 @@ export default function RootLayout({children}: RootLayoutProps) {
       <head>
         <link rel="shortcut icon" href="/favicon2.png" type="image/x-icon" />
       </head>
-      <body className="h-screen flex flex-col justify-center">
+      <body className="flex flex-col min-h-screen">
         <DarkModeProvider>
           <Header />
           <main className="flex-1 w-full p-5 mx-auto grid place-items-center gap-10">

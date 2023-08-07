@@ -40,7 +40,7 @@
                     transition: transform .3s ease;
                     font-size: 1.5rem;
                 }
-                &:hover{
+                &:hover, &:focus{
                     opacity: 1;
                     svg{
                         transform: translateX(.5rem);
@@ -62,7 +62,7 @@
     }
 }
 .light .animatedType{
-    color: #8847FF;
+    color: #5311D0;
 }
 .dark .animatedType{
     color: #99FF3A;

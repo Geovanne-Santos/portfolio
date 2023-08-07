@@ -31,7 +31,7 @@ const About = () => (
       <div className='skills'>
         <h2> Minhas Ferramentas/Tecnologias </h2>
         <div className='skillsSet'>
-          <ul>
+          <ul className='grid grid-cols-1 md:grid-cols-3'>
             <li><SiNextdotjs /> Next.js</li>
             <li><SiTypescript /> TypeScript</li>
             <li><SiSass />Sass</li>

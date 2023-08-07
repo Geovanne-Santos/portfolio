@@ -16,7 +16,7 @@ const Header = () => {
     const isSticky = () => {
       const header: HTMLElement | null = document.querySelector('header');
       const scrollTop = window.scrollY;
-      if (header && scrollTop > (header.offsetTop + 30)) {
+      if (header && scrollTop > 0) {
         if (!sticky) {
           setSticky(true);
         }
@@ -48,9 +48,9 @@ const Header = () => {
             </div>
             <nav>
                 <ul className='menu'>
-                    <li className={path === '/' ? 'active' : ''}><Link href={"/"}>Início</Link></li>
-                    <li className={path === '/sobre' ? 'active' : ''}><Link href={"/sobre"}>Sobre</Link></li>
-                    <li className={path === '/projetos' ? 'active' : ''}><Link href={"/projetos"}>Projetos</Link></li>
+                    <li className={path === '/' ? 'active' : ''}><Link href={"/"} prefetch={true}>Início</Link></li>
+                    <li className={path === '/sobre' ? 'active' : ''}><Link href={"/sobre"} prefetch={true}>Sobre</Link></li>
+                    <li className={path === '/projetos' ? 'active' : ''}><Link href={"/projetos"} prefetch={true}>Projetos</Link></li>
                 </ul>
             </nav>
 
@@ -60,9 +60,9 @@ const Header = () => {
                 </Link>
                 
                 {theme === 'dark' ? (
-                    <BsSunFill focusable={'true'} onClick={() => setTheme("light")} />        
+                    <BsSunFill focusable={true} onClick={() => setTheme("light")} />        
                 ) : (
-                    <BsMoonStarsFill focusable={'true'} onClick={() => setTheme("dark")}/>
+                    <BsMoonStarsFill focusable={true} onClick={() => setTheme("dark")}/>
                 )
             }
             </div>

@@ -31,7 +31,7 @@ const Home = () => {
               Eu sou Geovanne Meloni e eu sou <br />
               <span className="animatedType"></span>
             </p>
-          <Link href={"/sobre"}>Venha conhecer mais sobre mim! <BsArrowRight /></Link>
+          <Link href={"/sobre"} prefetch={true}>Venha conhecer mais sobre mim! <BsArrowRight /></Link>
         </div>
 
         <div className="presentationImg">

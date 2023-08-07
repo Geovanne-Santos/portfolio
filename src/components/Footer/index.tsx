@@ -7,22 +7,42 @@ const Footer = () => (
         <div className="footer">
             <ul>
                 <li>
-                    <Link href="https://github.com/Geovanne-Santos" target='_blank' >
+                    <Link 
+                        href="https://github.com/Geovanne-Santos" 
+                        target='_blank'
+                        aria-label='Veja meu repositório no Github'
+                        prefetch={true}
+                    >
                         <BsGithub />
                     </Link>
                 </li>
                 <li>
-                    <Link href="https://www.linkedin.com/in/geovanne-meloni-b2a575253/" target='_blank' >
+                    <Link 
+                        href="https://www.linkedin.com/in/geovanne-meloni-b2a575253/" 
+                        target='_blank'
+                        aria-label='Veja minha conta do Linkedin'
+                        prefetch={true}
+                    >
                         <BsLinkedin />
                     </Link>
                 </li>
                 <li>
-                    <Link href="mailto:geovamelo4431@gmail.com" target='_blank' >
+                    <Link 
+                        href="mailto:geovamelo4431@gmail.com" 
+                        target='_blank'
+                        aria-label='Contate-me pelo e-mail'
+                        prefetch={true}
+                    >
                         <BsEnvelopeFill />
                     </Link>
                 </li>
                 <li>
-                    <Link href="https://web.whatsapp.com/send?phone=5511981443833" target='_blank' >
+                    <Link 
+                        href="https://web.whatsapp.com/send?phone=5511981443833" 
+                        target='_blank'
+                        aria-label='Contate-me por mensagem'
+                        prefetch={true}
+                    >
                         <BsTelephoneFill />
                     </Link>
                 </li>

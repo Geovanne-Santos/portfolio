@@ -16,11 +16,11 @@ footer{
             li{
                 color: var(--text-color);
                 transition: .3s ease;
+                &:hover, &:focus{
+                    opacity: .4;
+                }
                 a svg{
                     font-size: 2rem;
-                }
-                &:hover{
-                    opacity: .4;
                 }
             } 
         }
