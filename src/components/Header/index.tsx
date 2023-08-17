@@ -60,9 +60,9 @@ const Header = () => {
                 </Link>
                 
                 {theme === 'dark' ? (
-                    <BsSunFill focusable={true} onClick={() => setTheme("light")} />        
+                    <BsSunFill tabIndex={0} onClick={() => setTheme("light")} />        
                 ) : (
-                    <BsMoonStarsFill focusable={true} onClick={() => setTheme("dark")}/>
+                    <BsMoonStarsFill tabIndex={0} onClick={() => setTheme("dark")}/>
                 )
             }
             </div>
